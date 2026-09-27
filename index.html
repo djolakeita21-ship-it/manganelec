@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manganelec - Rénovation</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Menu -->
+<header>
+    <nav>
+        <h2 class="h2">Manganelec</h2>
+
+        <ul class="liste">
+            <li><a class="bt" href="#accueil">Accueil</a></li>
+            <li><a class="bt" href="#about">À propos</a></li>
+            <li><a class="bt" href="#services">Services</a></li>
+            <li><a class="bt" href="#projets">Réalisations</a></li>
+            <li><a class="bt" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Accueil -->
+    <section id="accueil" class="accueil">
+        <h1>Donnez une nouvelle vie à votre habitation</h1>
+        <p>
+            Manganelec réalise vos travaux de rénovation
+            intérieure et extérieure, tout en respectant vos besoins et votre budget et en vous garantissant un travail de qualité.
+        </p>
+
+        <a href="#contact" class="btn">Demander un devis</a>
+    </section>
+
+    <!-- À propos -->
+     <div class="r">
+    <section id="about">
+        <h2>Qui sommes-nous ?</h2>
+
+        <p>
+           Chez Manganelec, nous sommes une entreprise spécialisée dans la rénovation intérieure et extérieure, dédiée à transformer vos espaces en lieux modernes, confortables et durables. Grâce à notre équipe de professionnels qualifiés, nous réalisons tous types de travaux : peinture, plomberie, électricité, carrelage, isolation, maçonnerie et rénovation complète de maisons, appartements et locaux professionnels. Notre mission est de vous offrir un service de qualité, des conseils personnalisés et des finitions irréprochables, tout en respectant vos délais et votre budget. Parce que votre satisfaction est notre priorité, nous vous accompagnons à chaque étape de votre projet, de l'étude de vos besoins jusqu'à la livraison des travaux. Manganelec, c'est l'engagement d'un travail soigné, de matériaux de qualité et d'un partenaire de confiance pour donner une nouvelle vie à votre habitat.
+        </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Nos services</h2>
+
+       <div class="cards">
+
+       <div class="job">
+    <article>
+        <i class="fa-solid fa-paint-roller"></i>
+        <h3>Peinture</h3>
+        <p>Travaux de peinture intérieure et extérieure avec des finitions soignées et des matériaux de qualité.</p>
+        <a class="b" href="service-detail.html"> en savoir plus </a>
+    </article>
+    </div>
+
+
+    <div class="job">
+    <article>
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Électricité</h3>
+        <p>Modernisation complète de maisons, appartements et locaux professionnels.</p>
+        <a class="b" href="service-detail.html"> en savoir plus </a>
+    </article>
+    </div>
+
+
+    <div class="job">
+    <article>
+        <i class="fa-solid fa-faucet"></i>
+        <h3>Plomberie</h3>
+        <p>Installation, réparation et maintenance sanitaire selon les réglementations.</p>
+        <a class="b" href="service-detail.html"> en savoir plus </a>  
+    </article>
+    </div>
+
+
+    <div class="job">
+    <article>
+        <i class="fa-solid fa-hammer"></i>
+        <h3>Rénovation</h3>
+        <p >Rénovation complète de maisons, appartements et locaux professionnels.</p>
+        <a class="b"href="service-detail.html"> en savoir plus </a>
+    </article>
+
+</div>
+    </section>
+
+
+    
+    <!-- Réalisations -->
+    <section id="projets">
+        <h2>Nos réalisations</h2>
+
+        <div class="projets">
+
+            <article>
+                <img src="cuisine.jpg" alt="Cuisine rénovée">
+                <h3>Cuisine</h3>
+            </article>
+
+            <article>
+                <img src="salon.jpg" alt="Salon rénové">
+                <h3>Salon</h3>
+            </article>
+
+            <article>
+                <img src="salle-bain.jpg" alt="Salle de bain rénovée">
+                <h3>Salle de bain</h3>
+            </article>
+
+        </div>
+    </section>
+
+    </div>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+
+        <p>Demandez votre devis gratuitement en toute securité.</p>
+
+        <form id="formulaire" method="post" action="traitement.php">
+
+            <input type="text" name="nom" placeholder="Votre nom" required>
+
+            <input type="email" name="email" placeholder="Votre email" required>
+
+            <input type="tel" name="telephone" placeholder="Votre téléphone">
+
+            <textarea name="message" placeholder="Votre projet"></textarea>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Manganelec - Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Affiche un message selon le résultat du formulaire (voir traitement.php)
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('success')) {
+            alert("Merci ! Votre demande a bien été envoyée, nous vous recontacterons rapidement.");
+        }
+        if (params.get('error')) {
+            alert("Veuillez renseigner au moins votre nom et votre email.");
+        }
+    </script>
+
+</body>
+</html>
